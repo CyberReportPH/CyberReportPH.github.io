@@ -1,2 +1,2 @@
-# cyber-report-ph
+# CyberReportPH
 Cyber crime reports platform
