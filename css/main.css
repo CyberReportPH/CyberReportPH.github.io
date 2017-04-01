@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Forza";
+  font-weight: bold;
+  src: url("../fonts/Forza-Bold.otf"); }
+@font-face {
+  font-family: "Forza";
+  src: url("../fonts/Forza-Light.otf"); }
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -1572,18 +1579,14 @@ select.uk-form-width-xsmall {
   box-sizing: border-box;
   padding: 0 30px;
   vertical-align: middle;
-  font-size: 0.875rem;
+  font-size: 1.1em;
   /* 7 */
   line-height: 38px;
   /* 8 */
   text-align: center;
   /* 9 */
   text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
-  -webkit-transition-property: color, background-color, border-color;
-  transition-property: color, background-color, border-color; }
+  font-family: 'Forza'; }
 
 .uk-button:not(:disabled) {
   cursor: pointer; }
@@ -1711,7 +1714,7 @@ select.uk-form-width-xsmall {
 .uk-button-large {
   padding: 0 40px;
   line-height: 53px;
-  font-size: 0.875rem; }
+  font-size: 1.5em; }
 
 /* Text modifiers
  ========================================================================== */
@@ -3608,7 +3611,7 @@ ul.uk-nav-sub {
   padding: 0 40px;
   /* 3 */
   font-size: 0.875rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Forza";
   /* 4 */
   text-decoration: none; }
 
@@ -7313,15 +7316,16 @@ td.uk-text-break {
  */
 .uk-logo {
   font-size: 1.5rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #666;
+  font-family: "Forza";
+  color: white;
   /* 1 */
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: bold; }
 
 /* Hover + Focus */
 .uk-logo:hover,
 .uk-logo:focus {
-  color: #666;
+  color: white;
   outline: none;
   /* 1 */
   text-decoration: none; }
@@ -9256,10 +9260,19 @@ td.uk-text-break {
   h3 {
     page-break-after: avoid; } }
 .cover-text {
-  font-size: 2.1em; }
+  font-size: 4.4em;
+  font-family: 'Forza';
+  font-weight: bold;
+  line-height: 100%; }
 
 .cover-text-mobile {
-  font-size: 1.4em; }
+  font-size: 2.4em;
+  font-family: 'Forza';
+  font-weight: bold;
+  line-height: 100%; }
+
+.cover-subtext {
+  font-size: 1.2em; }
 
 .about-content-container {
   display: flex;
@@ -9272,6 +9285,10 @@ td.uk-text-break {
   height: auto;
   margin-left: auto;
   margin-right: auto; }
+
+.about-header {
+  font-family: 'Forza';
+  font-weight: bold; }
 
 .about-paragraph {
   border-left: 4px solid #7456E2; }

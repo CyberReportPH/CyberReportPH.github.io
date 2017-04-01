@@ -1,4 +1,13 @@
+@font-face {
+    font-family: "Forza";
+    font-weight: bold;
+    src:url("../fonts/Forza-Bold.otf");
+}
 
+@font-face {
+    font-family: "Forza";
+    src:url("../fonts/Forza-Light.otf");
+}
 
 // CUSTOM VARIABLES
 //===========================
@@ -12,6 +21,15 @@ $base-heading-font-family: 'Forza', sans-serif;
 //===========================
 $button-primary-background: #7456E2;
 $button-primary-color: white;
+$button-large-font-size: 1.5em;
+$button-font-size: 1.1em;
+
+//===========================
+// Logo
+//===========================
+$logo-font-family: 'Forza';
+$logo-color: white;
+$logo-hover-color: white;
 
 //===========================
 // Navbar
@@ -26,6 +44,8 @@ $navbar-nav-item-active-color: white;
 
 $navbar-item-color: white;
 
+$navbar-nav-item-font-family: 'Forza';
+
 
 // Import default variables and available mixins.
 @import "node_modules/uikit/src/scss/variables-theme.scss";
@@ -33,6 +53,20 @@ $navbar-item-color: white;
 
 
 // Custom mixin overwrites.
+
+//===========================
+// Logo
+//===========================
+@mixin hook-button(){
+    font-family: 'Forza';
+}
+
+//===========================
+// Logo
+//===========================
+@mixin hook-logo(){
+    font-weight: bold;
+}
 
 //===========================
 // Navbar
@@ -64,11 +98,21 @@ $navbar-item-color: white;
 // Cover
 //===========================
 .cover-text{
-    font-size: 2.1em;
+    font-size: 4.4em;
+    font-family: 'Forza';
+    font-weight: bold;
+    line-height: 100%;
 }
 
 .cover-text-mobile{
-    font-size: 1.4em;
+    font-size: 2.4em;
+    font-family: 'Forza';
+    font-weight: bold;
+    line-height: 100%;
+}
+
+.cover-subtext{
+    font-size: 1.2em;
 }
 
 //===========================
@@ -86,6 +130,11 @@ $navbar-item-color: white;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about-header{
+    font-family: 'Forza';
+    font-weight: bold;
 }
 
 .about-paragraph{
