@@ -5,19 +5,48 @@
 //===========================
 $navbar-background: #1F2324;
 
+$navbar-nav-item-padding-horizontal: 40px;
+$navbar-nav-item-color: white;
+$navbar-nav-item-hover-color: white;
 $navbar-nav-item-onclick-color: white;
 $navbar-nav-item-active-color: white;
-$navbar-nav-item-padding-horizontal: 40px;
 
-
+$navbar-item-color: white;
 
 
 // Import default variables and available mixins.
 @import "node_modules/uikit/src/scss/variables-theme.scss";
 @import "node_modules/uikit/src/scss/mixins-theme.scss";
 
+
 // Custom mixin overwrites.
+
+//===========================
+// Navbar
+//===========================
+@mixin hook-navbar-nav-item-active(){
+    border-bottom: 5px solid white;
+}
+
+@mixin hook-navbar-nav-item-hover(){
+    border-bottom: 5px solid white;
+}
+
+
+//===========================
+// Cover
+//===========================
 @mixin hook-card() { color: #000; }
+@mixin hook-overlay() { 
+    font-size: 3em; 
+    color: white;
+}
 
 // Import UIkit.
 @import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+
+.logo-resize{
+    width: 20%;
+    height: 20%;
+}

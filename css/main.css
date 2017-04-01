@@ -2883,7 +2883,9 @@ select.uk-form-width-xsmall {
    Component: Overlay
  ========================================================================== */
 .uk-overlay {
-  padding: 30px 30px; }
+  padding: 30px 30px;
+  font-size: 3em;
+  color: white; }
 
 /*
  * Remove margin from the last-child
@@ -3615,7 +3617,7 @@ ul.uk-nav-sub {
  * Nav items
  */
 .uk-navbar-nav > li > a {
-  color: #999;
+  color: white;
   text-transform: uppercase;
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
@@ -3629,8 +3631,9 @@ ul.uk-nav-sub {
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li > a.uk-open {
-  color: #666;
-  outline: none; }
+  color: white;
+  outline: none;
+  border-bottom: 5px solid white; }
 
 /* OnClick */
 .uk-navbar-nav > li > a:active {
@@ -3638,12 +3641,13 @@ ul.uk-nav-sub {
 
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: white; }
+  color: white;
+  border-bottom: 5px solid white; }
 
 /* Item
  ========================================================================== */
 .uk-navbar-item {
-  color: #666; }
+  color: white; }
 
 /* Toggle
  ========================================================================== */
@@ -9252,5 +9256,8 @@ td.uk-text-break {
   h2,
   h3 {
     page-break-after: avoid; } }
+.logo-resize {
+  width: 20%;
+  height: 20%; }
 
 /*# sourceMappingURL=main.css.map */
