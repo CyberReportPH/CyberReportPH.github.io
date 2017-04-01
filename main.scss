@@ -1,4 +1,9 @@
+
+
 // CUSTOM VARIABLES
+
+$global-font-family: 'Source Sans Pro', sans-serif;
+$base-heading-font-family: 'Forza', sans-serif;
 
 //===========================
 // Navbar
@@ -25,11 +30,11 @@ $navbar-item-color: white;
 // Navbar
 //===========================
 @mixin hook-navbar-nav-item-active(){
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid #7456E2;
 }
 
 @mixin hook-navbar-nav-item-hover(){
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid #7456E2;
 }
 
 
@@ -37,8 +42,7 @@ $navbar-item-color: white;
 // Cover
 //===========================
 @mixin hook-card() { color: #000; }
-@mixin hook-overlay() { 
-    font-size: 3em; 
+@mixin hook-overlay() {  
     color: white;
 }
 
@@ -46,7 +50,32 @@ $navbar-item-color: white;
 @import "node_modules/uikit/src/scss/uikit-theme.scss";
 
 
-.logo-resize{
-    width: 20%;
-    height: 20%;
+// Custom CSS
+
+//===========================
+// Cover
+//===========================
+.cover-text{
+    font-size: 2.1em;
+}
+
+.cover-text-mobile{
+    font-size: 1.4em;
+}
+
+//===========================
+// About
+//===========================
+.about-content-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.about-img{
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

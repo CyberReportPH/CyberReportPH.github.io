@@ -10,7 +10,7 @@
  */
 html {
   /* 1 */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
@@ -232,7 +232,7 @@ h4, .uk-h4,
 h5, .uk-h5,
 h6, .uk-h6 {
   margin: 0 0 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Forza", sans-serif;
   font-weight: normal;
   color: #333;
   text-transform: none; }
@@ -2884,7 +2884,6 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 .uk-overlay {
   padding: 30px 30px;
-  font-size: 3em;
   color: white; }
 
 /*
@@ -3609,7 +3608,7 @@ ul.uk-nav-sub {
   padding: 0 40px;
   /* 3 */
   font-size: 0.875rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   /* 4 */
   text-decoration: none; }
 
@@ -3633,7 +3632,7 @@ ul.uk-nav-sub {
 .uk-navbar-nav > li > a.uk-open {
   color: white;
   outline: none;
-  border-bottom: 5px solid white; }
+  border-bottom: 5px solid #7456E2; }
 
 /* OnClick */
 .uk-navbar-nav > li > a:active {
@@ -3642,7 +3641,7 @@ ul.uk-nav-sub {
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
   color: white;
-  border-bottom: 5px solid white; }
+  border-bottom: 5px solid #7456E2; }
 
 /* Item
  ========================================================================== */
@@ -7314,7 +7313,7 @@ td.uk-text-break {
  */
 .uk-logo {
   font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #666;
   /* 1 */
   text-decoration: none; }
@@ -9256,8 +9255,22 @@ td.uk-text-break {
   h2,
   h3 {
     page-break-after: avoid; } }
-.logo-resize {
-  width: 20%;
-  height: 20%; }
+.cover-text {
+  font-size: 2.1em; }
+
+.cover-text-mobile {
+  font-size: 1.4em; }
+
+.about-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.about-img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*# sourceMappingURL=main.css.map */
