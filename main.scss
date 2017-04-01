@@ -1,6 +1,16 @@
-// Custom variables and variable overwrites.
-$global-link-color: #DA7D02;
-$global-navbar-background: black;
+// CUSTOM VARIABLES
+
+//===========================
+// Navbar
+//===========================
+$navbar-background: #1F2324;
+
+$navbar-nav-item-onclick-color: white;
+$navbar-nav-item-active-color: white;
+$navbar-nav-item-padding-horizontal: 40px;
+
+
+
 
 // Import default variables and available mixins.
 @import "node_modules/uikit/src/scss/variables-theme.scss";
