@@ -6,6 +6,10 @@
 @font-face {
   font-family: "Forza";
   src: url("../fonts/Forza-Light.otf"); }
+@font-face {
+  font-family: "Forza";
+  font-weight: normal;
+  src: url("../fonts/Forza-Book.otf"); }
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -9259,6 +9263,11 @@ td.uk-text-break {
   h2,
   h3 {
     page-break-after: avoid; } }
+.vertical-align-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .cover-text {
   font-size: 4.4em;
   font-family: 'Forza';
@@ -9273,11 +9282,6 @@ td.uk-text-break {
 
 .cover-subtext {
   font-size: 1.2em; }
-
-.about-content-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
 
 .about-img {
   display: block;
@@ -9295,5 +9299,12 @@ td.uk-text-break {
 
 .about-paragraph > p {
   padding-left: 20px; }
+
+.report-header {
+  font-weight: normal; }
+
+.clicked {
+  background: #7456E2;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

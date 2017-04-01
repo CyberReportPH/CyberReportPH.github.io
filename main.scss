@@ -9,6 +9,12 @@
     src:url("../fonts/Forza-Light.otf");
 }
 
+@font-face {
+    font-family: "Forza";
+    font-weight: normal;
+    src:url("../fonts/Forza-Book.otf");
+}
+
 // CUSTOM VARIABLES
 //===========================
 // Fonts
@@ -93,6 +99,15 @@ $navbar-nav-item-font-family: 'Forza';
 
 
 // Custom CSS
+//===========================
+// Global
+//===========================
+.vertical-align-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
 
 //===========================
 // Cover
@@ -118,12 +133,6 @@ $navbar-nav-item-font-family: 'Forza';
 //===========================
 // About
 //===========================
-.about-content-container{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-}
-
 .about-img{
     display: block;
     max-width: 80%;
@@ -143,4 +152,16 @@ $navbar-nav-item-font-family: 'Forza';
 
 .about-paragraph > p{
     padding-left:20px;
+}
+
+//===========================
+// About
+//===========================
+.report-header{
+    font-weight: normal;
+}
+
+.clicked{
+    background: #7456E2;
+    color: white;
 }
