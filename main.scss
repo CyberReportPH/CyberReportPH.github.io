@@ -1,9 +1,17 @@
 
 
 // CUSTOM VARIABLES
-
+//===========================
+// Fonts
+//===========================
 $global-font-family: 'Source Sans Pro', sans-serif;
 $base-heading-font-family: 'Forza', sans-serif;
+
+//===========================
+// Button
+//===========================
+$button-primary-background: #7456E2;
+$button-primary-color: white;
 
 //===========================
 // Navbar
@@ -78,4 +86,12 @@ $navbar-item-color: white;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about-paragraph{
+    border-left: 4px solid #7456E2;
+}
+
+.about-paragraph > p{
+    padding-left:20px;
 }
