@@ -25,10 +25,16 @@ $base-heading-font-family: 'Forza', sans-serif;
 //===========================
 // Button
 //===========================
-$button-primary-background: #7456E2;
-$button-primary-color: white;
 $button-large-font-size: 1.5em;
 $button-font-size: 1.1em;
+
+$button-primary-background: #7456E2;
+$button-primary-color: white;
+
+$button-default-hover-background: #7456E2;
+$button-default-hover-color: white;
+$button-default-active-background: #7456E2;
+$button-default-active-color: white;
 
 //===========================
 // Logo

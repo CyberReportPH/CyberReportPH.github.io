@@ -27,23 +27,78 @@
             </div>
         </nav>
 
+        <!-- Cyber Crime Types -->
         <div class="uk-container vertical-align-container uk-text-center" uk-height-viewport="offset-top: true">
             <h1 class="report-header">SELECT THE TYPE OF CYBERCRIME</h1>
             <br><br>
             <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">ONLINE<br>SCAM</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">ONLINE<br> SCAM</button>
                 </div>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">BUYING OR<br>SELLING</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">BUYING OR<br> SELLING</button>
                 </div>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">IDENTITY<br>THEFT</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">IDENTITY<br> THEFT</button>
                 </div>
                 <div>
                     <button class="uk-button uk-button-default uk-button-large" onclick="clicked(this)">OTHERS</button>
                 </div>
             </div>
+            <br><br><br> 
+            <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
+                <div>
+                    <button class="uk-button uk-button-default uk-button-large">BACK</button>
+                </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-button-large">CONTINUE</button>
+                </div>
+            </div>      
+        </div>
+
+
+        <!-- Personal Info Form -->
+        <div class="uk-container uk-container-small vertical-align-container" uk-height-viewport="offset-top: true">
+            <h1 class="report-header uk-text-center">PERSONAL INFORMATION</h1>
+            <br><br>
+            <form class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1">
+                    <label class="uk-form-label">LAST NAME</label>
+                    <input id="last-name" class="uk-input" type="text" placeholder="">
+                </div>
+                <div class="uk-width-1-1@s">
+                    <label class="uk-form-label">FIRST NAME</label>
+                    <input id="first-name" class="uk-input" type="text" placeholder="">
+                </div>
+                <div class="uk-width-1-6@s">
+                    <label class="uk-form-label">M.I.</label>
+                    <input id="middle-initial" class="uk-input" type="text" placeholder="">
+                </div>
+                <div class="uk-width-1-6@s">
+                    <label class="uk-form-label">BIRTHDATE</label>
+                    <input id="birth-month" class="uk-input" type="text" placeholder="">
+                </div>
+                <div class="uk-width-1-6@s">
+                    <label class="uk-form-label"> </label>
+                    <input id="birth-date" class="uk-input" type="text" placeholder="">
+                </div>
+                <div class="uk-width-1-6@s">
+                    <label class="uk-form-label"> </label>
+                    <input id="birth-year" class="uk-input" type="text" placeholder="">
+                </div>
+                 <div class="uk-width-1-1">
+                    <label class="uk-form-label">EMAIL</label>
+                    <input id="email" class="uk-input" type="email" placeholder="">
+                </div>
+                 <div class="uk-width-1-1">
+                    <label class="uk-form-label">CONTACT NUMBER</label>
+                    <input id="contact-number" class="uk-input" type="number" placeholder="">
+                </div>
+                <div class="uk-width-1-1@s">
+                    <label class="uk-form-label">DETAILS OF CRIME</label>
+                    <textarea id="crime-details" class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                </div>
+            </form>
             <br><br><br> 
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>

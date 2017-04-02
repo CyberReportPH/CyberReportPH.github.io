@@ -1625,15 +1625,15 @@ select.uk-form-width-xsmall {
 /* Hover + Focus */
 .uk-button-default:hover,
 .uk-button-default:focus {
-  background-color: transparent;
-  color: #333;
+  background-color: #7456E2;
+  color: white;
   border-color: #b2b2b2; }
 
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
-  background-color: transparent;
-  color: #333;
+  background-color: #7456E2;
+  color: white;
   border-color: #999999; }
 
 /*
