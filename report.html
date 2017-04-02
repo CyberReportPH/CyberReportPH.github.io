@@ -6,6 +6,13 @@
         
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css" />
+
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_niv3BeCcoz29KAfWIXEkY");
+            })();
+        </script>
     </head>
 
     <body>
@@ -28,7 +35,7 @@
         </nav>
 
         <!-- Cyber Crime Types -->
-        <div class="uk-container vertical-align-container uk-text-center" uk-height-viewport="offset-top: true">
+        <div id="crime-types" class="uk-container vertical-align-container uk-text-center" uk-height-viewport="offset-top: true">
             <h1 class="report-header">SELECT THE TYPE OF CYBERCRIME</h1>
             <br><br>
             <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
@@ -51,17 +58,17 @@
                     <button class="uk-button uk-button-default uk-button-large">BACK</button>
                 </div>
                 <div>
-                    <button class="uk-button uk-button-primary uk-button-large">CONTINUE</button>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="addCrimeType()">CONTINUE</button>
                 </div>
             </div>      
         </div>
 
 
         <!-- Personal Info Form -->
-        <div class="uk-container uk-container-small vertical-align-container hide" uk-height-viewport="offset-top: true">
+        <div id='personal-info' class="uk-container uk-container-small vertical-align-container hidden" uk-height-viewport="offset-top: true">
             <h1 class="report-header uk-text-center">PERSONAL INFORMATION</h1>
             <br><br>
-            <form class="uk-grid-small" id="personal-info" uk-grid >
+            <form class="uk-grid-small" id="personal-info-form" uk-grid >
                 <div class="uk-width-1-1">
                     <label class="uk-form-label">LAST NAME</label>
                     <input name="last-name" class="uk-input" type="text" placeholder="">
@@ -94,6 +101,10 @@
                     <label class="uk-form-label">CONTACT NUMBER</label>
                     <input name="contact-number" class="uk-input" type="number" placeholder="">
                 </div>
+                <div class="uk-width-1-1">
+                    <label class="uk-form-label">ADDRESS</label>
+                    <input name="address" class="uk-input" type="number" placeholder="">
+                </div>
                 <div class="uk-width-1-1@s">
                     <label class="uk-form-label">DETAILS OF CRIME</label>
                     <textarea name="crime-details" class="uk-textarea" rows="5" placeholder=""></textarea>
@@ -102,7 +113,7 @@
             <br><br><br> 
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large">BACK</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('personal-info', 'crime-types')">BACK</button>
                 </div>
                 <div>
                     <button class="uk-button uk-button-primary uk-button-large" onclick="addPersonalInfo()">CONTINUE</button>
@@ -112,15 +123,17 @@
 
 
         <!-- Set Appointment -->
-        <div class="uk-container vertical-align-container uk-text-center hide" uk-height-viewport="offset-top: true">
-            <div class="uk-width-5-6 report-notice-container">
-                <div class="report-notice">
-                    IN ORDER TO ACTUALIZE THE REPORTS, THE DOJ<br>
-                    REQUESTS YOUR PHYSICAL PRESENCE <br>
-                    TO ACCOMPLISH AN OFFICIAL REPORT.
-                </div>
-            </div>  
-            <br><br>
+        <div id='appointments' class="uk-container vertical-align-container uk-text-center hidden" uk-height-viewport="offset-top: true">
+            <div class="uk-grid-small uk-flex-center" uk-grid>
+                <div class="uk-width-5-6 report-notice-container">
+                    <div class="report-notice">
+                        IN ORDER TO ACTUALIZE THE REPORTS, THE DOJ<br>
+                        REQUESTS YOUR PHYSICAL PRESENCE <br>
+                        TO ACCOMPLISH AN OFFICIAL REPORT.
+                    </div>
+                </div>  
+            </div>
+            <br>
             <h1 class="report-header">SET APPOINTMENT</h1>
             <br><br>
             <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
@@ -132,13 +145,13 @@
                     <label class="uk-text-left">TIME</label>
                     <div class="uk-margin uk-text-left">
                         <div class="uk-form-controls">
-                            <label><input class="uk-radio" type="radio" name="radio1"> 10:00 - 11:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 11:00 - 12:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 12:00 - 13:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 13:00 - 14:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 14:00 - 15:00  AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 15:00 - 16:00  AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="radio1"> 16:00 - 17:00  AVAILABLE</label>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="10:00 - 11:00"> 10:00 - 11:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="11:00 - 12:00"> 11:00 - 12:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="12:00 - 13:00"> 12:00 - 13:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="13:00 - 14:00"> 13:00 - 14:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="14:00 - 15:00"> 14:00 - 15:00  AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="15:00 - 16:00"> 15:00 - 16:00  AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="16:00 - 17:00"> 16:00 - 17:00  AVAILABLE</label>
                         </div>
                     </div>
                 </div>
@@ -146,10 +159,29 @@
             <br><br>
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large">BACK</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('appointments', 'personal-info')">BACK</button>
                 </div>
                 <div>
-                    <button class="uk-button uk-button-primary uk-button-large">CONTINUE</button>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="submitReport()">CONTINUE</button>
+                </div>
+            </div>      
+        </div>
+
+        <!-- Thank you -->
+        <div id='thank-you' class="uk-container vertical-align-container uk-text-center hidden" uk-height-viewport="offset-top: true">
+            <div class="uk-grid-small uk-flex-center" uk-grid>
+                <div class="uk-width-5-6 thanks-notice-container">
+                    <div class="thanks-notice">
+                        <span>THANK YOU!</span><br><br>
+                        AN EMAIL WILL BE SENT TO YOU <br>
+                        TO CONFIRM YOUR APPOINTMENT.
+                    </div>
+                </div>  
+            </div>
+            <br><br>
+            <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
+                <div>
+                    <a class="uk-button uk-button-primary uk-button-large" href="index.html">HOME</a>
                 </div>
             </div>      
         </div>

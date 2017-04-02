@@ -9300,7 +9300,7 @@ td.uk-text-break {
 .about-paragraph > p {
   padding-left: 20px; }
 
-.hide {
+.hidden {
   display: none; }
 
 .report-header {
@@ -9321,5 +9321,19 @@ td.uk-text-break {
   font-family: 'Forza';
   font-weight: normal;
   padding: 25px; }
+
+.thanks-notice-container {
+  border: 1px solid #7456E2;
+  padding: 10px; }
+
+.thanks-notice {
+  color: black;
+  font-size: 1.6em;
+  font-family: 'Forza';
+  font-weight: normal;
+  padding: 6px; }
+
+.thanks-notice > span {
+  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

@@ -163,7 +163,7 @@ $navbar-nav-item-font-family: 'Forza';
 //===========================
 // Report
 //===========================
-.hide{
+.hidden{
     display: none;
 }
 
@@ -188,4 +188,21 @@ $navbar-nav-item-font-family: 'Forza';
     font-family: 'Forza';
     font-weight: normal;
     padding: 25px;
+}
+
+.thanks-notice-container{
+    border: 1px solid #7456E2; 
+    padding: 10px;
+}
+
+.thanks-notice{
+    color: black;
+    font-size: 1.6em;
+    font-family: 'Forza';
+    font-weight: normal;
+    padding: 6px;
+}
+
+.thanks-notice > span{
+    font-weight: bold;
 }
