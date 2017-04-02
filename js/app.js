@@ -8,8 +8,8 @@ let details = '';
 let appointmentDate = '';
 
 function changeSection(currentSection, nextSection){
-    document.getElementById(currentSection).classList.add('hide');
-    document.getElementById(nextSection).classList.remove('hide');
+    document.getElementById(currentSection).classList.add('hidden');
+    document.getElementById(nextSection).classList.remove('hidden');
 }
 
 function clicked(button){
@@ -22,7 +22,7 @@ function clicked(button){
 
 function addCrimeType(){
     let selectedBtn = document.querySelector('.clicked');
-    if(!selectedBtn){
+    if(!selectedBtn.innerHTML){
         return;
     }
     cyberCrimeType = selectedBtn.textContent || selectedBtn.innerText;
@@ -48,11 +48,8 @@ function addPersonalInfo(){
     let form = document.querySelector('#personal-info-form');
 
     if(!validateForm(form)){
-        console.log("Fail");
-        //return;
+        return;
     }
-
-    console.log("Success");
 
     let elements = form.elements;
 
@@ -86,7 +83,7 @@ function submitReport(){
         return;
     }
 
-    console.log('prepare send');
+    changeSection('appointments', 'spinner');
 
     emailjs.send('gmail', 'cyberreportph', {
         to_email: email,
@@ -97,7 +94,7 @@ function submitReport(){
         details: details
     }).then(response => {
         console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-        changeSection('appointments', 'thank-you');
+        changeSection('spinner', 'thank-you');
     }).catch(error => {
         console.log(error);
     });

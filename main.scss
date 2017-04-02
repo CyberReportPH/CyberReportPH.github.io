@@ -67,10 +67,17 @@ $navbar-nav-item-font-family: 'Forza';
 // Custom mixin overwrites.
 
 //===========================
-// Logo
+// Button
 //===========================
 @mixin hook-button(){
     font-family: 'Forza';
+}
+
+//===========================
+// Cover
+//===========================
+@mixin hook-overlay() {  
+    color: white;
 }
 
 //===========================
@@ -91,13 +98,11 @@ $navbar-nav-item-font-family: 'Forza';
     border-bottom: 5px solid #7456E2;
 }
 
-
 //===========================
-// Cover
+// Spinner
 //===========================
-@mixin hook-card() { color: #000; }
-@mixin hook-overlay() {  
-    color: white;
+@mixin hook-spinner(){
+    color: #7456E2;
 }
 
 // Import UIkit.
@@ -205,4 +210,27 @@ $navbar-nav-item-font-family: 'Forza';
 
 .thanks-notice > span{
     font-weight: bold;
+}
+
+//===========================
+// Contact
+//===========================
+h3{
+    font-weight: bold;
+}
+
+.contact-email{
+    color:#7456E2
+}
+
+.contact-icon{
+    padding: 10px;
+}
+
+.contact-icons-container {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    border: 3px double #000;
+    white-space: nowrap;
 }

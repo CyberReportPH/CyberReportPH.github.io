@@ -2366,7 +2366,8 @@ select.uk-form-width-xsmall {
 .uk-card {
   position: relative;
   box-sizing: border-box;
-  color: #000; }
+  -webkit-transition: box-shadow 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out; }
 
 /* Sections
  ========================================================================== */
@@ -2648,6 +2649,9 @@ select.uk-form-width-xsmall {
 /*
  * Adopts `uk-icon`
  */
+.uk-spinner {
+  color: #7456E2; }
+
 /* SVG
  ========================================================================== */
 .uk-spinner > * {
@@ -9335,5 +9339,21 @@ td.uk-text-break {
 
 .thanks-notice > span {
   font-weight: bold; }
+
+h3 {
+  font-weight: bold; }
+
+.contact-email {
+  color: #7456E2; }
+
+.contact-icon {
+  padding: 10px; }
+
+.contact-icons-container {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  border: 3px double #000;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=main.css.map */
