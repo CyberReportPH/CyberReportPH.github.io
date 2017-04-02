@@ -58,48 +58,92 @@
 
 
         <!-- Personal Info Form -->
-        <div class="uk-container uk-container-small vertical-align-container" uk-height-viewport="offset-top: true">
+        <div class="uk-container uk-container-small vertical-align-container hide" uk-height-viewport="offset-top: true">
             <h1 class="report-header uk-text-center">PERSONAL INFORMATION</h1>
             <br><br>
-            <form class="uk-grid-small" uk-grid>
+            <form class="uk-grid-small" id="personal-info" uk-grid >
                 <div class="uk-width-1-1">
                     <label class="uk-form-label">LAST NAME</label>
-                    <input id="last-name" class="uk-input" type="text" placeholder="">
+                    <input name="last-name" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-1@s">
                     <label class="uk-form-label">FIRST NAME</label>
-                    <input id="first-name" class="uk-input" type="text" placeholder="">
+                    <input name="first-name" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-6@s">
                     <label class="uk-form-label">M.I.</label>
-                    <input id="middle-initial" class="uk-input" type="text" placeholder="">
+                    <input name="middle-initial" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-6@s">
                     <label class="uk-form-label">BIRTHDATE</label>
-                    <input id="birth-month" class="uk-input" type="text" placeholder="">
+                    <input name="birth-month" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-6@s">
                     <label class="uk-form-label"> </label>
-                    <input id="birth-date" class="uk-input" type="text" placeholder="">
+                    <input name="birth-date" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-6@s">
                     <label class="uk-form-label"> </label>
-                    <input id="birth-year" class="uk-input" type="text" placeholder="">
+                    <input name="birth-year" class="uk-input" type="text" placeholder="">
                 </div>
                  <div class="uk-width-1-1">
                     <label class="uk-form-label">EMAIL</label>
-                    <input id="email" class="uk-input" type="email" placeholder="">
+                    <input name="email" class="uk-input" type="email" placeholder="">
                 </div>
                  <div class="uk-width-1-1">
                     <label class="uk-form-label">CONTACT NUMBER</label>
-                    <input id="contact-number" class="uk-input" type="number" placeholder="">
+                    <input name="contact-number" class="uk-input" type="number" placeholder="">
                 </div>
                 <div class="uk-width-1-1@s">
                     <label class="uk-form-label">DETAILS OF CRIME</label>
-                    <textarea id="crime-details" class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                    <textarea name="crime-details" class="uk-textarea" rows="5" placeholder=""></textarea>
                 </div>
             </form>
             <br><br><br> 
+            <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
+                <div>
+                    <button class="uk-button uk-button-default uk-button-large">BACK</button>
+                </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="addPersonalInfo()">CONTINUE</button>
+                </div>
+            </div>      
+        </div>
+
+
+        <!-- Set Appointment -->
+        <div class="uk-container vertical-align-container uk-text-center hide" uk-height-viewport="offset-top: true">
+            <div class="uk-width-5-6 report-notice-container">
+                <div class="report-notice">
+                    IN ORDER TO ACTUALIZE THE REPORTS, THE DOJ<br>
+                    REQUESTS YOUR PHYSICAL PRESENCE <br>
+                    TO ACCOMPLISH AN OFFICIAL REPORT.
+                </div>
+            </div>  
+            <br><br>
+            <h1 class="report-header">SET APPOINTMENT</h1>
+            <br><br>
+            <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
+                <div class="uk-width-3-5">
+                    <label class="uk-text-left">DATE</label>
+                    <button class="uk-button uk-button-default uk-button-large">CALENDAR<br> HERE</button>
+                </div>
+                <div>
+                    <label class="uk-text-left">TIME</label>
+                    <div class="uk-margin uk-text-left">
+                        <div class="uk-form-controls">
+                            <label><input class="uk-radio" type="radio" name="radio1"> 10:00 - 11:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 11:00 - 12:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 12:00 - 13:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 13:00 - 14:00  NOT AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 14:00 - 15:00  AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 15:00 - 16:00  AVAILABLE</label><br>
+                            <label><input class="uk-radio" type="radio" name="radio1"> 16:00 - 17:00  AVAILABLE</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
                     <button class="uk-button uk-button-default uk-button-large">BACK</button>
