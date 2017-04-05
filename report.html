@@ -20,17 +20,42 @@
         <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-navbar-left">
                 <ul class="uk-navbar-nav">
-                    <a class="uk-navbar-toggle uk-hidden@s" uk-navbar-toggle-icon href="#"></a>            
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#mobile-nav" uk-toggle></a>            
                     <a class="uk-navbar-item uk-logo uk-visible@m" href="index.html"> <img src="img/nav-icon.png" alt=""> CyberReport PH</a>
                 </ul>
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav uk-visible@m">
-                    <li><a href="index.html">HOME</a></li>
+                    <li class="uk-active"><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                    <li class="uk-active"><a href="report.html">REPORT</a></li>
+                    <li><a href="report.html">REPORT</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
+            </div>
+
+            <div id="mobile-nav" uk-offcanvas>
+                <div class="uk-offcanvas-bar">
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                    <div class="uk-container uk-text-center">
+                        <br>
+                        <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
+                            <div class="uk-width-1-1@s mobile-nav-container">
+                                <a href="index.html ">HOME</a><br>
+                            </div>
+                            <div class="uk-width-1-1@s mobile-nav-container">
+                                <a href="about.html">ABOUT</a><br>
+                            </div>
+                            <div class="uk-width-1-1@s mobile-nav-container">
+                                <a href="report.html">REPORT</a><br>
+                            </div>
+                            <div class="uk-width-1-1@s mobile-nav-container">
+                                <a href="contact.html">CONTACT</a><br>
+                            </div>
+                        </div>   
+                    </div>
+                </ul>
+                </div>
             </div>
         </nav>
 
