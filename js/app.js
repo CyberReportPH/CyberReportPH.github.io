@@ -3,9 +3,10 @@ let name = '';
 let email = '';
 let address = '';
 let birthDate = '';
-let contacNumber = '';
+let contactNumber = '';
 let details = '';
 let appointmentDate = '';
+let appointmentTime = '';
 
 function changeSection(currentSection, nextSection){
     document.getElementById(currentSection).classList.add('hidden');
@@ -57,7 +58,7 @@ function addPersonalInfo(){
     email = elements['email'].value;
     address = elements['address'].value;
     birthDate = elements['birth-month'].value + ' ' + elements['birth-date'].value + ' ' + elements['birth-year'].value;
-    contacNumber = elements['contact-number'].value;
+    contactNumber = elements['contact-number'].value;
     details = elements['crime-details'].value;
 
     changeSection('personal-info', 'appointments');
@@ -77,12 +78,23 @@ function addTime(){
     return true;
 }
 
-function submitReport(){
-    
+function addConfirmationInfo(){
     if(!addTime()){
         return;
     }
 
+    document.querySelector('#confirmation-name').innerHTML = name;
+    document.querySelector('#confirmation-birthdate').innerHTML = birthDate;
+    document.querySelector('#confirmation-email').innerHTML = email;
+    document.querySelector('#confirmation-contact').innerHTML = contactNumber;
+    document.querySelector('#confirmation-address').innerHTML = address;
+    document.querySelector('#confirmation-details').innerHTML = details;
+    document.querySelector('#confirmation-time').innerHTML = appointmentDate + '<br>' + appointmentTime;
+
+    changeSection('appointments', 'confirmation')
+}
+
+function submitReport(){
     changeSection('appointments', 'spinner');
 
     emailjs.send('gmail', 'cyberreportph', {

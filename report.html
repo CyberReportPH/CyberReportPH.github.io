@@ -55,7 +55,7 @@
             <br><br><br> 
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large">BACK</button>
+                    <a class="uk-button uk-button-default uk-button-large" href="index.html">BACK</a>
                 </div>
                 <div>
                     <button class="uk-button uk-button-primary uk-button-large" onclick="addCrimeType()">CONTINUE</button>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="uk-width-1-1">
                     <label class="uk-form-label">ADDRESS</label>
-                    <input name="address" class="uk-input" type="number" placeholder="">
+                    <input name="address" class="uk-input" type="text" placeholder="">
                 </div>
                 <div class="uk-width-1-1@s">
                     <label class="uk-form-label">DETAILS OF CRIME</label>
@@ -145,13 +145,13 @@
                     <label class="uk-text-left">TIME</label>
                     <div class="uk-margin uk-text-left">
                         <div class="uk-form-controls">
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="10:00 - 11:00"> 10:00 - 11:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="11:00 - 12:00"> 11:00 - 12:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="12:00 - 13:00"> 12:00 - 13:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="13:00 - 14:00"> 13:00 - 14:00  NOT AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="14:00 - 15:00"> 14:00 - 15:00  AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="15:00 - 16:00"> 15:00 - 16:00  AVAILABLE</label><br>
-                            <label><input class="uk-radio" type="radio" name="timePicker" value="16:00 - 17:00"> 16:00 - 17:00  AVAILABLE</label>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="10:00 - 11:00"> 10:00 - 11:00  <span class="report-availability">NOT AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="11:00 - 12:00"> 11:00 - 12:00  <span class="report-availability">NOT AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="12:00 - 13:00"> 12:00 - 13:00  <span class="report-availability">NOT AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="13:00 - 14:00"> 13:00 - 14:00  <span class="report-availability">NOT AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="14:00 - 15:00"> 14:00 - 15:00  <span class="report-availability available">AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="15:00 - 16:00"> 15:00 - 16:00  <span class="report-availability available">AVAILABLE</span></label><br>
+                            <label><input class="uk-radio" type="radio" name="timePicker" value="16:00 - 17:00"> 16:00 - 17:00  <span class="report-availability available">AVAILABLE</span></label>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,63 @@
                     <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('appointments', 'personal-info')">BACK</button>
                 </div>
                 <div>
-                    <button class="uk-button uk-button-primary uk-button-large" onclick="submitReport()">CONTINUE</button>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="addConfirmationInfo()">CONTINUE</button>
+                </div>
+            </div>      
+        </div>
+
+        <!-- Confirmation -->
+        <div id='confirmation' class="uk-container vertical-align-container hidden" uk-height-viewport="offset-top: true">
+            <h1 class="report-header uk-text-center">CONFIRMATION</h1>
+            <br><br>
+            <div class="uk-grid-small uk-flex-center" uk-grid>    
+                <div class="uk-width-5-6 report-confirmation-container uk-flex-center">
+                    <div class="uk-grid-small uk-flex-center uk-text-left" uk-grid>
+                        <div class="uk-width-1-2 confirmation-details-container">
+                            <h4><span class="confirmation-label">NAME:</span><br>
+                                <span id="confirmation-name"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-2 confirmation-details-container">
+                            <h4><span class="confirmation-label">BIRTHDATE:</span><br>
+                                <span id="confirmation-birthdate"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-2 confirmation-details-container">
+                            <h4><span class="confirmation-label">EMAIL:</span><br>
+                                <span id="confirmation-email"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-2 confirmation-details-container">
+                            <h4><span class="confirmation-label">CONTACT:</span><br>
+                                <span id="confirmation-contact"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-1 confirmation-details-container">
+                            <h4><span class="confirmation-label">ADDRESS:</span><br>
+                                <span id="confirmation-address"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-1 confirmation-details-container">
+                            <h4><span class="confirmation-label">DETAILS OF CRIME:</span><br>
+                                <span id="confirmation-details"></span>
+                            </h4>
+                        </div>
+                        <div class="uk-width-1-1 confirmation-details-container">
+                            <h4><span class="confirmation-label">TIME OF APPOINTMENT:</span><br>
+                                <span id="confirmation-time"></span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <br><br>
+            <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
+                <div>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('appointments', 'personal-info')">BACK</button>
+                </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="submitReport()">CONFIRM</button>
                 </div>
             </div>      
         </div>

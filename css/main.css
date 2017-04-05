@@ -9270,7 +9270,9 @@ td.uk-text-break {
 .vertical-align-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .cover-text {
   font-size: 4.4em;
@@ -9307,6 +9309,11 @@ td.uk-text-break {
 .hidden {
   display: none; }
 
+label {
+  font-family: Forza;
+  font-weight: normal;
+  font-size: 1.3em; }
+
 .report-header {
   font-weight: normal; }
 
@@ -9325,6 +9332,22 @@ td.uk-text-break {
   font-family: 'Forza';
   font-weight: normal;
   padding: 25px; }
+
+.report-availability {
+  padding-left: 30px; }
+
+.available {
+  color: #7456E2; }
+
+.report-confirmation-container {
+  border: 1px solid #1F2324;
+  padding: 14px; }
+
+.confirmation-details-container {
+  padding: 20px; }
+
+.confirmation-label {
+  font-weight: bold; }
 
 .thanks-notice-container {
   border: 1px solid #7456E2;
