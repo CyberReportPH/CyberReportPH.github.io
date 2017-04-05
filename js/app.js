@@ -95,7 +95,7 @@ function addConfirmationInfo(){
 }
 
 function submitReport(){
-    changeSection('appointments', 'spinner');
+    changeSection('confirmation', 'spinner');
 
     emailjs.send('gmail', 'cyberreportph', {
         to_email: email,
