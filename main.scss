@@ -126,6 +126,10 @@ $navbar-nav-item-font-family: 'Forza';
     padding: 16px;
 }
 
+.title{
+    padding-left: 10px;
+}
+
 //===========================
 // Cover
 //===========================
@@ -182,6 +186,10 @@ label{
     font-family: Forza;
     font-weight: normal;
     font-size: 1.3em;
+}
+
+.report-crime-desc-button{
+    line-height: 5;
 }
 
 .report-header{

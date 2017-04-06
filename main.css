@@ -9278,6 +9278,9 @@ td.uk-text-break {
   font-size: 1.4em;
   padding: 16px; }
 
+.title {
+  padding-left: 10px; }
+
 .cover-text {
   font-size: 4.4em;
   font-family: 'Forza';
@@ -9317,6 +9320,9 @@ label {
   font-family: Forza;
   font-weight: normal;
   font-size: 1.3em; }
+
+.report-crime-desc-button {
+  line-height: 5; }
 
 .report-header {
   font-weight: normal; }
