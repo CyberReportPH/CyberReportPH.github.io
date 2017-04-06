@@ -9300,6 +9300,14 @@ td.uk-text-break {
 .cover-subtext {
   font-size: 1.2em; }
 
+.home-follow-container h3 {
+  font-size: 1em; }
+
+.follow-icon {
+  height: 60px;
+  width: 60px;
+  padding: 8px; }
+
 .about-img {
   display: block;
   max-width: 80%;
