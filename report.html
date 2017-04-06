@@ -88,6 +88,36 @@
             </div>      
         </div>
 
+        <!-- Cyber Crime Description -->
+        <div id="crime-description" class="uk-container vertical-align-container uk-text-center hidden" uk-height-viewport="offset-top: true">
+            <h1 class="report-header">DID SOMETHING LIKE THIS<br>HAPPEN TO YOU?</h1>
+            <br><br>
+            <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                <div class="siema report-carousel">
+                    <div><img src="img/comp1.jpg" alt=""/></div>
+                    <div><img src="img/comp2.jpg" alt=""/></div>
+                    <div><img src="img/comp1.jpg" alt=""/></div>
+                </div>
+                <div class="vertical-align-container">
+                    <p class="uk-text-left uk-width-5-6 report-description-container" style="font-size: 1.2em">
+                        <strong>Buying or Selling</strong> scams involves a buyer and a seller 
+                        engaged in a business concerend with consumer 
+                        products. There are various deceptive sales practices 
+                        for online fraud in which anyone can be a victim.
+                    </p>
+                </div>
+            </div>
+            <br><br><br> 
+            <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
+                <div>
+                    <a class="uk-button uk-button-default uk-button-large" href="changeSection('crime-description', 'crime-types')">BACK</a>
+                </div>
+                <div>
+                    <button class="uk-button uk-button-primary uk-button-large" onclick="changeSection('crime-description', 'personal-info')">CONTINUE</button>
+                </div>
+            </div>      
+        </div>
+
 
         <!-- Personal Info Form -->
         <div id='personal-info' class="uk-container uk-container-small vertical-align-container hidden" uk-height-viewport="offset-top: true">
@@ -138,7 +168,7 @@
             <br><br><br> 
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('personal-info', 'crime-types')">BACK</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('personal-info', 'crime-description')">BACK</button>
                 </div>
                 <div>
                     <button class="uk-button uk-button-primary uk-button-large" onclick="addPersonalInfo()">CONTINUE</button>
@@ -281,6 +311,11 @@
         </script>
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
+        <script src="js/siema.min.js"></script>
         <script src="js/app.js"></script>
+
+        <script>
+            
+        </script>
     </body>
 </html>

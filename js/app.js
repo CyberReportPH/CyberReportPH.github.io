@@ -11,6 +11,12 @@ let appointmentTime = '';
 function changeSection(currentSection, nextSection){
     document.getElementById(currentSection).classList.add('hidden');
     document.getElementById(nextSection).classList.remove('hidden');
+
+    if(nextSection == 'crime-description'){
+        new Siema({
+            perPage: 1,
+        });
+    }
 }
 
 function clicked(button){
@@ -27,7 +33,7 @@ function addCrimeType(){
         return;
     }
     cyberCrimeType = selectedBtn.textContent || selectedBtn.innerText;
-    changeSection('crime-types', 'personal-info')
+    changeSection('crime-types', 'crime-description')
 }
 
 function validateForm(form){
