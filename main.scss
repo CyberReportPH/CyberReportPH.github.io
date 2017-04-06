@@ -91,11 +91,16 @@ $navbar-nav-item-font-family: 'Forza';
 // Navbar
 //===========================
 @mixin hook-navbar-nav-item-active(){
-    border-bottom: 5px solid #7456E2;
+    span{
+        border-bottom: 2px solid #7456E2;
+    }
+    
 }
 
 @mixin hook-navbar-nav-item-hover(){
-    border-bottom: 5px solid #7456E2;
+    span{
+        border-bottom: 2px solid #7456E2;
+    }
 }
 
 //===========================
@@ -127,7 +132,7 @@ $navbar-nav-item-font-family: 'Forza';
 }
 
 .title{
-    padding-left: 10px;
+    padding-left: 12px;
 }
 
 //===========================
@@ -189,7 +194,7 @@ label{
 }
 
 .report-crime-desc-button{
-    line-height: 5;
+    line-height: 1.7;
 }
 
 .report-header{
@@ -199,10 +204,6 @@ label{
 .clicked{
     background: #7456E2;
     color: white;
-}
-
-.report-carousel{
-    height: 180px;
 }
 
 .report-description-container{
