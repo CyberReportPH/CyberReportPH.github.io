@@ -6,6 +6,7 @@
         
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/flatpickr.css">
 
         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
@@ -136,17 +137,9 @@
                     <label class="uk-form-label">M.I.</label>
                     <input name="middle-initial" class="uk-input" type="text" placeholder="">
                 </div>
-                <div class="uk-width-1-6@s">
-                    <label class="uk-form-label">BIRTH MONTH</label>
-                    <input name="birth-month" class="uk-input" type="text" placeholder="">
-                </div>
-                <div class="uk-width-1-6@s">
+                <div class="uk-width-1-3@s">
                     <label class="uk-form-label">BIRTH DATE</label>
-                    <input name="birth-date" class="uk-input" type="text" placeholder="">
-                </div>
-                <div class="uk-width-1-6@s">
-                    <label class="uk-form-label">BIRTH YEAR</label>
-                    <input name="birth-year" class="uk-input" type="text" placeholder="">
+                    <input id="personal-info-date" name="birth-date" class="uk-input" type="text" placeholder="">
                 </div>
                  <div class="uk-width-1-1">
                     <label class="uk-form-label">EMAIL</label>
@@ -178,8 +171,8 @@
 
 
         <!-- Set Appointment -->
-        <div id='appointments' class="uk-container vertical-align-container uk-text-center hidden" uk-height-viewport="offset-top: true">
-            <div class="uk-grid-small uk-flex-center" uk-grid>
+        <div id='appointments' class="uk-container vertical-align-container hidden" uk-height-viewport="offset-top: true">
+            <div class="uk-grid-small uk-flex-center uk-text-center" uk-grid>
                 <div class="uk-width-5-6 report-notice-container">
                     <div class="report-notice">
                         IN ORDER TO ACTUALIZE THE REPORTS, THE DOJ<br>
@@ -189,12 +182,12 @@
                 </div>  
             </div>
             <br>
-            <h1 class="report-header">SET APPOINTMENT</h1>
+            <h1 class="report-header uk-text-center">SET APPOINTMENT</h1>
             <br><br>
-            <div class="uk-child-width-expand@s uk-grid-small uk-grid-match" uk-grid>
-                <div class="uk-width-3-5">
+            <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                <div>
                     <label class="uk-text-left">DATE</label>
-                    <button class="uk-button uk-button-default uk-button-large">CALENDAR<br> HERE</button>
+                    <span id="appointments-calendar" style="margin:0 auto;"></span>
                 </div>
                 <div>
                     <label class="uk-text-left">TIME</label>
@@ -270,7 +263,7 @@
             <br><br>
             <div class="uk-child-width-1-4@s uk-grid-small uk-grid-match uk-flex-center" uk-grid>
                 <div>
-                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('appointments', 'personal-info')">BACK</button>
+                    <button class="uk-button uk-button-default uk-button-large" onclick="changeSection('confirmation', 'appointments')">BACK</button>
                 </div>
                 <div>
                     <button class="uk-button uk-button-primary uk-button-large" onclick="submitReport()">CONFIRM</button>
@@ -312,10 +305,17 @@
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
         <script src="js/siema.min.js"></script>
+        <script src="js/flatpickr.min.js"></script>
         <script src="js/app.js"></script>
 
         <script>
-            
+            new Flatpickr(document.querySelector('#personal-info-date'), {
+                altInput: true
+            });
+            new Flatpickr(document.querySelector('#appointments-calendar'), {
+                altInput: true,
+                inline: true
+            })
         </script>
     </body>
 </html>

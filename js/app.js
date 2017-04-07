@@ -63,7 +63,7 @@ function addPersonalInfo(){
     name = elements['last-name'].value + ', ' + elements['first-name'].value + ' ' + elements['middle-initial'].value + '.';
     email = elements['email'].value;
     address = elements['address'].value;
-    birthDate = elements['birth-month'].value + ' ' + elements['birth-date'].value + ' ' + elements['birth-year'].value;
+    birthDate = elements['birth-date'].value;
     contactNumber = elements['contact-number'].value;
     details = elements['crime-details'].value;
 
@@ -72,13 +72,14 @@ function addPersonalInfo(){
 
 function addTime(){
     let time= document.querySelector('input[name="timePicker"]:checked').value;
+    let date = document.querySelector('#appointments-calendar').value;
 
     console.log(time)
     if(!time){
         return false;
     }
 
-    appointmentDate = '4/2/2017'; //Sample Date -> Change soon
+    appointmentDate = date;
     appointmentTime = time;
 
     return true;
