@@ -96,6 +96,10 @@
                         experience.
                     </span>
                 </div>
+                <div class="uk-position-medium uk-position-bottom-center uk-overlay uk-text-center">
+                    <span id="carousel-back-1" uk-icon="icon: chevron-left; ratio: 2.2" style="cursor: pointer"></span>
+                    <span id="carousel-next-1" uk-icon="icon: chevron-right; ratio: 2.2" style="cursor: pointer"></span>
+                </div>
             </div>
             <div class="uk-cover-container " uk-height-viewport="offset-top: true">
                 <img src="img/comp1.jpg" alt="">
@@ -110,6 +114,10 @@
                         and present you with a simpler way of reporting your cybercrime<br>
                         experience.
                     </span>
+                </div>
+                <div class="uk-position-medium uk-position-bottom-center uk-overlay uk-text-center">
+                    <span id="carousel-back-2" uk-icon="icon: chevron-left; ratio: 2.2" style="cursor: pointer"></span>
+                    <span id="carousel-next-2" uk-icon="icon: chevron-right; ratio: 2.2" style="cursor: pointer"></span>
                 </div>
             </div>
         </div>
@@ -133,9 +141,12 @@
         <script src="js/siema.min.js"></script>
 
         <script>
-            new Siema({
-                loop: true,
-            });
+            const siema = new Siema();
+            document.querySelector('#carousel-back-1').addEventListener('click', () => siema.prev());
+            document.querySelector('#carousel-next-1').addEventListener('click', () => siema.next());
+
+            document.querySelector('#carousel-back-2').addEventListener('click', () => siema.prev());
+            document.querySelector('#carousel-next-2').addEventListener('click', () => siema.next());
         </script>
     </body>
 </html>
