@@ -83,7 +83,7 @@
 
         <div class="siema uk-visible@s">
             <div class="uk-cover-container " uk-height-viewport="offset-top: true">
-                <img src="img/comp2.jpg" alt="">
+                <img src="img/Home-01.jpg" alt="">
 
                 <div class="uk-position-medium uk-position-center-left uk-overlay uk-text-left">
                     <span class="cover-text">CyberReport PH</span> 
@@ -102,22 +102,17 @@
                 </div>
             </div>
             <div class="uk-cover-container " uk-height-viewport="offset-top: true">
-                <img src="img/comp1.jpg" alt="">
-
-                <div class="uk-position-medium uk-position-center-left uk-overlay uk-text-left">
-                    <span class="cover-text">CyberReport PH</span> 
-                    <br><br>
-                    <span class="cover-subtext">
-                        CyberReport PH is your friendly community hub for cybercrime<br>
-                        activity in the Philippines. We give you the opportunities to learn<br>
-                        more about cybercrime, get updated with the latest information,<br>
-                        and present you with a simpler way of reporting your cybercrime<br>
-                        experience.
-                    </span>
-                </div>
+                <img src="img/Home-02.jpg" alt="">
                 <div class="uk-position-medium uk-position-bottom-center uk-overlay uk-text-center">
                     <span id="carousel-back-2" uk-icon="icon: chevron-left; ratio: 2.2" style="cursor: pointer"></span>
                     <span id="carousel-next-2" uk-icon="icon: chevron-right; ratio: 2.2" style="cursor: pointer"></span>
+                </div>
+            </div>
+            <div class="uk-cover-container " uk-height-viewport="offset-top: true">
+                <img src="img/Home-03.jpg" alt="">
+                <div class="uk-position-medium uk-position-bottom-center uk-overlay uk-text-center">
+                    <span id="carousel-back-3" uk-icon="icon: chevron-left; ratio: 2.2" style="cursor: pointer"></span>
+                    <span id="carousel-next-3" uk-icon="icon: chevron-right; ratio: 2.2" style="cursor: pointer"></span>
                 </div>
             </div>
         </div>
@@ -147,6 +142,9 @@
 
             document.querySelector('#carousel-back-2').addEventListener('click', () => siema.prev());
             document.querySelector('#carousel-next-2').addEventListener('click', () => siema.next());
+
+            document.querySelector('#carousel-back-3').addEventListener('click', () => siema.prev());
+            document.querySelector('#carousel-next-3').addEventListener('click', () => siema.next());
         </script>
     </body>
 </html>
