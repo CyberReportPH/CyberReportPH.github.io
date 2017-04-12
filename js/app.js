@@ -13,9 +13,7 @@ function changeSection(currentSection, nextSection){
     document.getElementById(nextSection).classList.remove('hidden');
 
     if(nextSection == 'crime-description'){
-        new Siema({
-            perPage: 1,
-        });
+        
     }
 }
 
@@ -39,35 +37,72 @@ function addCrimeType(){
 function showCrimeDescription(){
     changeSection('crime-types', 'crime-description');
     
-    let onlineScam = 
+    let onlineScamDesc = 
         `<strong>Online Scams</strong> are dishonest schemes that seek to take advantage of unsuspecting
         people to gain benefit (such as money, or access to personal details).`;
-    let identityTheft = 
+    let identityTheftDesc = 
         `<strong>Identity Theft</strong> occurs when a cybercriminal gains access to personal and important
         information to steal money and gain benefits.`;
-    let onelineTrading = 
+    let onelineTradingDesc = 
         `<strong>Online Trading Issues</strong> inovlves a scanner targeting people who
         buy, sell, or trade items online.`;
-    let others = 
+    let othersDesc = 
         `There are multiple types and schemes of cybercrime. We need your help in finding out what they are.
         You can do this by telling us what happened through reporting.`;
 
+    
     let crimeDesc;
     switch(cyberCrimeType){
         case 'ONLINE SCAM':
-            crimeDesc = onlineScam;
+            crimeDesc = onlineScamDesc;
             break;
         case 'IDENTITY THEFT':
-            crimeDesc = identityTheft;
+            crimeDesc = identityTheftDesc;
             break;
         case 'ONLINE TRADING':
-            crimeDesc = onelineTrading;
+            crimeDesc = onelineTradingDesc;
             break;
         case 'OTHERS':
-            crimeDesc = others;
+            crimeDesc = othersDesc;
             break;
     }
+
     document.querySelector('.report-description-container').innerHTML = crimeDesc;
+
+    showCrimeImages();
+}
+
+function showCrimeImages(){
+    let onlineScamImg = ['OnlineScam-01.jpg', 'OnlineScam-02.jpg', 'OnlineScam-03.jpg'];
+    let identityTheftImg = ['IdentityTheft.jpg'];
+    let onelineTradingImg = ['OnlineTrading.jpg'];
+    let othersImg = ['Others.jpg'];
+
+    let crimeImg;
+    switch(cyberCrimeType){
+        case 'ONLINE SCAM':
+            crimeImg = onlineScamImg;
+            break;
+        case 'IDENTITY THEFT':
+            crimeImg = identityTheftImg;
+            break;
+        case 'ONLINE TRADING':
+            crimeImg = onelineTradingImg;
+            break;
+        case 'OTHERS':
+            crimeImg = othersImg;
+            break;
+    }
+
+    let imgContainer = '';
+    for(let img of crimeImg){
+        imgContainer += `<div><img src="img/${img}" alt=""/></div>`
+    }
+    document.querySelector('#report-crime-image').innerHTML = imgContainer;
+
+    new Siema({
+        perPage: 1,
+    });
 }
 
 function validateForm(form){
