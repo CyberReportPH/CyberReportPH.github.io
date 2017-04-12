@@ -33,7 +33,41 @@ function addCrimeType(){
         return;
     }
     cyberCrimeType = selectedBtn.textContent || selectedBtn.innerText;
-    changeSection('crime-types', 'crime-description')
+    showCrimeDescription();
+}
+
+function showCrimeDescription(){
+    changeSection('crime-types', 'crime-description');
+    
+    let onlineScam = 
+        `<strong>Online Scams</strong> are dishonest schemes that seek to take advantage of unsuspecting
+        people to gain benefit (such as money, or access to personal details).`;
+    let identityTheft = 
+        `<strong>Identity Theft</strong> occurs when a cybercriminal gains access to personal and important
+        information to steal money and gain benefits.`;
+    let onelineTrading = 
+        `<strong>Online Trading Issues</strong> inovlves a scanner targeting people who
+        buy, sell, or trade items online.`;
+    let others = 
+        `There are multiple types and schemes of cybercrime. We need your help in finding out what they are.
+        You can do this by telling us what happened through reporting.`;
+
+    let crimeDesc;
+    switch(cyberCrimeType){
+        case 'ONLINE SCAM':
+            crimeDesc = onlineScam;
+            break;
+        case 'IDENTITY THEFT':
+            crimeDesc = identityTheft;
+            break;
+        case 'ONLINE TRADING':
+            crimeDesc = onelineTrading;
+            break;
+        case 'OTHERS':
+            crimeDesc = others;
+            break;
+    }
+    document.querySelector('.report-description-container').innerHTML = crimeDesc;
 }
 
 function validateForm(form){
