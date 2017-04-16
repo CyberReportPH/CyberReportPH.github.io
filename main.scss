@@ -17,6 +17,11 @@
 
 // CUSTOM VARIABLES
 //===========================
+// Global
+//===========================
+$global-background: #E9EBEE;
+
+//===========================
 // Fonts
 //===========================
 $global-font-family: 'Source Sans Pro', sans-serif;
@@ -29,19 +34,19 @@ $button-large-font-size: 1.5em;
 $button-font-size: 1.1em;
 
 $button-primary-background: #7456E2;
-$button-primary-color: white;
+$button-primary-color: #E9EBEE;
 
 $button-default-hover-background: #7456E2;
-$button-default-hover-color: white;
+$button-default-hover-color: #E9EBEE;
 $button-default-active-background: #7456E2;
-$button-default-active-color: white;
+$button-default-active-color: #E9EBEE;
 
 //===========================
 // Logo
 //===========================
 $logo-font-family: 'Forza';
-$logo-color: white;
-$logo-hover-color: white;
+$logo-color: #E9EBEE;
+$logo-hover-color: #E9EBEE;
 
 //===========================
 // Navbar
@@ -49,12 +54,12 @@ $logo-hover-color: white;
 $navbar-background: #1F2324;
 
 $navbar-nav-item-padding-horizontal: 40px;
-$navbar-nav-item-color: white;
-$navbar-nav-item-hover-color: white;
-$navbar-nav-item-onclick-color: white;
-$navbar-nav-item-active-color: white;
+$navbar-nav-item-color: #E9EBEE;
+$navbar-nav-item-hover-color: #E9EBEE;
+$navbar-nav-item-onclick-color: #E9EBEE;
+$navbar-nav-item-active-color: #E9EBEE;
 
-$navbar-item-color: white;
+$navbar-item-color: #E9EBEE;
 
 $navbar-nav-item-font-family: 'Forza';
 
@@ -77,7 +82,7 @@ $navbar-nav-item-font-family: 'Forza';
 // Cover
 //===========================
 @mixin hook-overlay() {  
-    color: white;
+    color: #E9EBEE;
 }
 
 //===========================
@@ -215,7 +220,7 @@ label{
 
 .clicked{
     background: #7456E2;
-    color: white;
+    color: #E9EBEE;
 }
 
 .report-description-container{
@@ -229,7 +234,7 @@ label{
 
 .report-notice{
     background:#7456E2;
-    color: white;
+    color: #E9EBEE;
     font-size: 1.6em;
     font-family: 'Forza';
     font-weight: normal;
